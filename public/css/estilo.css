@@ -1,0 +1,191 @@
+/* Css GERAL */
+body{
+    min-height: 100vh;
+    font-family: 'Open Sans', 'Rowdies', sans-serif;
+    position: relative;
+}
+p{
+    color: blue;
+    font-family: 'Rowdies', 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: #fff;
+}
+.btn:focus{
+    box-shadow: none;
+}
+.msg{
+    min-width: 345px;
+    padding: 35px 0px 0px 0px;
+    border: 2px solid #f00;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+    background-color: #ffc107;
+}
+.form-check{
+    float: none;
+}
+.sem-cadastro{
+    text-align: center;
+    font-size: 10pt;
+}
+.form-control-sm, .form-select-sm{
+    box-shadow: 0 0 0 0!important;
+}
+/* CSS DO NAVBAR com menu, titulo e logout */
+.container-fluid{
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 15pt;
+    font-weight: bolder;
+    position: fixed;
+    top: 5px;
+}
+.navbar-name img{
+    width: 35px;
+    padding-right: 7px;
+}
+.navbar-name span{
+    font-family: 'Crillee It BT', 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+.bi-list{
+    color: #fff;
+    font-size: 24pt;
+    font-weight: bolder;
+}
+.bi-list:hover{
+    color: rgb(228,255,0);
+}
+.bi-x-square-fill{
+    padding: 0 0 0 5px;
+    font-size: 20pt;
+    color: #fff;
+}
+.bi-x-square-fill:hover{
+    color: rgb(228,255,0);
+}
+/* Menu */
+.offcanvas-header img{
+    width: 100%;
+}
+.offcanvas-start{
+    top: 5px;
+    bottom: 25px;
+    max-width: 215px;
+    background-color: rgb(255,0,0);
+    font-size: 12pt;
+    font-weight: bolder;
+}
+.dropdown-menu{
+    background-color: rgb(188,0,0);
+    min-width: 175px;
+}
+.dropdown-menu > li > a{
+    font-size: 10pt;
+    font-weight: bolder;
+}
+.dropdown-menu > li > a:hover {
+    color: #1e2125;
+    background-color: #ff0000;
+}
+#offcanvasNavbarDropdown:hover{
+   color: rgb(228,255,0) !important; 
+}
+#offcanvasNavbarDropdown:focus{
+    color: rgb(228,255,0) !important; 
+ }
+/* Pagina inicial */
+.logo-inicial{
+    padding: 100px;
+}
+.logo-inicial img{
+    width: 100%;
+    opacity: .5;
+}
+/* Pagina do Cliente */
+.container-xxl{
+    min-width: 345px;
+    padding: 35px 10px;
+}
+#clientes-container{
+    padding: 30px 30px 0 30px;;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+#clientes-container h2{
+    text-align: center;
+    font-size: 15pt;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+#search{
+    max-width: 50%;
+    margin: 0 auto;
+}
+#search-produto{
+    max-width: 50%;
+    margin: 0 auto;
+}
+.row{
+    padding-bottom: 25px;
+}
+.form-divisor{
+    border-bottom: 1px solid #ccc;
+}
+.modal-footer{
+    justify-content: flex-start;
+}
+#btn-cadastrar{
+    min-width: 90px;
+    font-size: 12pt;
+}
+.btn-cliente{
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    padding: 2px 4px;
+    font-size: 11pt;
+    min-width: 28px;
+    max-width: 40px;
+    border-radius: 4px;
+}
+.btn-cliente:hover{
+    color: #fff;
+    background-color: #c10000;
+}
+.btn-cliente:focus{
+    color: #fff;
+    background-color: #c10000;
+    border-color: #7c0101;
+    box-shadow: none;
+}
+.table{
+    font-size: 8pt;
+}
+/* PAGiNA DO PRODUTO */
+.tab-content > .active {
+    display: flex;
+}
+
+  /* Pagina de edição do grupo */
+.editContainer{
+    margin: auto;
+}
+
+ /* Footer */
+footer{
+    font-family: 'Crillee It BT', 'Open Sans', sans-serif;
+    text-align: center;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
