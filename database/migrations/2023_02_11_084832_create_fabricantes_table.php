@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('fabricantes', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('ramo')->nullable();
+            $table->boolean('actived');
             $table->timestamps();
         });
     }

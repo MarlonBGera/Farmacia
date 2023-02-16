@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('forma_pagamentos', function (Blueprint $table) {
             $table->id();
+            $table->string('forma')->nullable();
+            $table->string('tipo')->nullable();
+            $table->boolean('a_receber')->nullable();
+            $table->boolean('active')->default('1');
             $table->timestamps();
         });
     }
