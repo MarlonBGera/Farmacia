@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('funcionarios', function (Blueprint $table) {
+        Schema::create('fornecedores', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('cpf');
-            $table->string('user');
-            $table->string('password', 255);
-            $table->integer('sexo');
-            $table->unsignedBigInteger('contato_id');
-            $table->unsignedBigInteger('endereco_id');
+            $table->string('nomeFantasia');
+            $table->string('razaoSocial');
+            $table->string('cnpj');
+            $table->string('ie');
+            $table->string('im');
+            $table->unsignedBigInteger('contato_id'); //Criando a coluna para relacionamento com contato
+            $table->unsignedBigInteger('endereco_id'); //Criando a coluna para relacionamento com endereco
             $table->timestamps();
-            
+
             //Relacionamento com Contato
             $table->foreign('contato_id')
                   ->references('id')
@@ -47,6 +47,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('funcionarios');
+        Schema::dropIfExists('fornecedores');
     }
 };

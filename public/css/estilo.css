@@ -1,0 +1,34 @@
+/* CSS GLOBAL */
+
+/* CSS LOGIN */
+.tela-login{
+    margin-top: 25vh;
+}
+.logo-empresa{
+    width: 25%;
+    margin: auto;
+}
+.logo-empresa img{
+    width: 100%;
+}
+.form-login{
+    width: 45vw;
+    margin: auto !important;
+}
+.btn-login{
+    width: 100%;
+}
+.btn-login:hover{
+    background-color: #0a0ab8 !important;
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+}
+/* CSS SISTEMA */
+/*** CSS MENU ***/
+/*** CSS CONTAINERS ***/
+
+/* CSS FOOTER */

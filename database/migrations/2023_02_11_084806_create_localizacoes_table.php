@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('grupos', function (Blueprint $table) {
+        Schema::create('localizacoes', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->integer('comissao');
-            $table->integer('desconto_maximo');
-            $table->unsignedBigInteger('produto_id');
-            $table->boolean('actived')->default('1');
+            $table->string('loc_produto');
+            $table->text('loc_descricao');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('grupos');
+        Schema::dropIfExists('localizacoes');
     }
 };

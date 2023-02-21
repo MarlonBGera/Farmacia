@@ -10,4 +10,8 @@ class Localizacao extends Model
     use HasFactory;
 
     protected $table = 'localizacoes';
+
+    public function produtos(){
+        return $this->hasMany(Produto::class, 'id', 'localizacao_id');
+    }
 }

@@ -21,23 +21,23 @@ return new class extends Migration
             $table->string('registro', 15)->nullable(); //RG (PF) ou Inscrição Estadual (PJ)
             $table->string('im')->nullable(); //Inscrição Municial caso o PJ tenha
             $table->integer('sexo')->nullable();
-            $table->unsignedBigInteger('id_contato');
-            $table->unsignedBigInteger('id_endereco');
+            $table->unsignedBigInteger('contato_id');
+            $table->unsignedBigInteger('endereco_id');
             $table->timestamps();
 
             //Relacionamento com Contato
-            $table->foreing('id_contato')
-                  ->reference('contatos')
-                  ->on('id')
+            $table->foreign('contato_id')
+                  ->references('id')
+                  ->on('contatos')
                   ->onDelete('cascade');
-            $table->unique('id_contato');
+            $table->unique('contato_id');
 
             //Relacionamento com Endereço
-            $table->foreing('id_endereco')
-                  ->reference('enderecos')
-                  ->on('id')
+            $table->foreign('endereco_id')
+                  ->references('id')
+                  ->on('enderecos')
                   ->onDelete('cascade');
-            $table->unique('id_endereco');
+            $table->unique('endereco_id');
         });
     }
 
