@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
-            $table->integer('ean', 13);
+            $table->integer('ean');
             $table->string('descricao');
             $table->string('modelo')->nullable();
-            $table->integer('tipo_produto', 1);
+            $table->integer('tipo_produto');
             $table->string('un_medida');
             $table->float('custo', 5, 2);
             $table->float('margem', 3, 2);

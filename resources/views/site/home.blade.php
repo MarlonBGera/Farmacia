@@ -14,13 +14,31 @@
         <div class="logo-empresa">
             <img src="{{ asset('img/logo.png') }}" alt="Logomarca da empresa">
         </div>
-        <form action="/login" method="post" class="form-login row g-3 mt-4">
+        <form action="/login" method="post" class="form-login row g-2 mt-4">
+            {{-- Verificando se houve erro na autenticação da tentativa de login! --}}
+            @if($message = Session::get('Error')) {{-- Caso dê sucesso no envio ele avisa que foi enviado --}}
+                <div class="alert alert-warning">    
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+            @if ($errors->has('login'))
+                <div class="alert alert-warning">
+                    <span class="text-danger">{{ $errors->first('login') }}</span>
+                </div>
+            @endif
+            @if ($errors->has('password'))
+                <div class="alert alert-warning">
+                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                </div>
+            @endif
+            @csrf
+            
             <div class="form-floating mb-3 col-md-12">
-                <input type="text" class="form-control" id="nome" placeholder="Login" required>
+                <input type="text" value="{{ old('login') }}" class="form-control" name="login" id="nome" placeholder="Login" required>
                 <label for="nome">Nome</label>
             </div>
             <div class="form-floating col-md-12">
-                <input type="password" class="form-control" id="pass" placeholder="Senha" required>
+                <input type="password" class="form-control" name="password" id="pass" placeholder="Senha" required>
                 <label for="pass">Senha</label>
             </div>
             <div class="col-12">

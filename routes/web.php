@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,10 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', [UserController::class, 'index'])->name('TelaLogin');
+// Começando a fazer a chamada de login com autenticação.
+Route::get('/', [AuthController::class, 'index'])->name('TelaLogin');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/painel', [AuthController::class, 'show'])->name('painel');
+
 
 Route::get('/cliente/{id}', [ClienteController::class, 'show']);

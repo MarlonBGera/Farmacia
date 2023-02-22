@@ -2,7 +2,7 @@
 
 /* CSS LOGIN */
 .tela-login{
-    margin-top: 25vh;
+    margin-top: 15vh;
 }
 .logo-empresa{
     width: 25%;
@@ -12,7 +12,7 @@
     width: 100%;
 }
 .form-login{
-    width: 45vw;
+    width: 35vw;
     margin: auto !important;
 }
 .btn-login{
@@ -20,9 +20,9 @@
 }
 .btn-login:hover{
     background-color: #0a0ab8 !important;
-    transform: translateY(-3px);
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
